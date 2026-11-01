@@ -1,0 +1,16 @@
+name: SilicoBuddy offline checks
+on:
+  push:
+  pull_request:
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Core tests
+        run: node --test scripts/silico-buddy/test.mjs
+      - name: CLI dry run
+        run: node scripts/silico-buddy/cli.mjs --task "offline CI smoke test" --out-dir "${{ runner.temp }}/silicobuddy-runs"
