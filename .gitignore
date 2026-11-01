@@ -1,0 +1,9 @@
+node_modules/
+runs/
+.env
+.env.*
+!.env.example
+*.log
+.silicobuddy-firefox/
+firefox-profile/
+.auth/
