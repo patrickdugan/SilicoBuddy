@@ -1,0 +1,19 @@
+{
+  "name": "silicobuddy",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Bounded Firefox ChatGPT-Silico auto-research handoff",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "research:silicobuddy": "node scripts/silico-buddy/cli.mjs",
+    "buddy": "node scripts/silico-buddy/cli.mjs",
+    "test": "node --test scripts/silico-buddy/test.mjs",
+    "test:silicobuddy": "node --test scripts/silico-buddy/test.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0"
+  }
+}
